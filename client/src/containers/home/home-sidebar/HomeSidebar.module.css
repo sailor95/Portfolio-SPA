@@ -11,7 +11,7 @@
   padding: 5px;
   overflow: hidden;
   border: none;
-  font: normal normal bold 32px/1 Verdana, Geneva, sans-serif;
+  font: normal normal bold 40px/1 Roboto, sans-serif;
   color: rgba(0,0,0,1);
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
