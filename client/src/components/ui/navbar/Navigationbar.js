@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Navbar, Container } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import classes from './Navigationbar.module.css';
 
 const Navigationbar = () => {
