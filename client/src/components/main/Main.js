@@ -1,7 +1,15 @@
 import React from 'react';
 
-const main = () => (
-  <div>Main</div>
-);
+import Navigationbar from '../ui/navbar/Navigationbar';
+import Home from '../../containers/home/Home';
+
+const main = () => {
+  return (
+    <div>
+      <Navigationbar />
+      <Home />
+    </div>
+  );
+}
 
 export default main;
