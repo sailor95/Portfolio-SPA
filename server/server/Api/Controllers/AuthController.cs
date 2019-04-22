@@ -39,7 +39,6 @@ namespace server.Api.Controllers
             }
 
             return authService.GetAuthData(user.Id);
-
         }
 
         [HttpPost("register")]

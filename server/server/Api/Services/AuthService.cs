@@ -19,8 +19,8 @@ namespace server.Api.Services
 
         public AuthService(string s, int l)
         {
-            this.jwtSecret = s;
-            this.jwtLifespan = l;
+            jwtSecret = s;
+            jwtLifespan = l;
         }
 
         public AuthData GetAuthData(string id)
