@@ -32,11 +32,9 @@ namespace server
             services.AddCors();
 
             services
-                .AddEntityFrameworkNpgsql()
                 .AddDbContext<PortfolioContext>(options =>
-                    options.UseNpgsql(
-                        Configuration.GetConnectionString("PortfolioContext"),
-                        o => o.MigrationsAssembly("Portfolio.API")
+                    options.UseSqlServer(
+                        Configuration.GetConnectionString("DefaultConnection")
                     )
                  );
 
