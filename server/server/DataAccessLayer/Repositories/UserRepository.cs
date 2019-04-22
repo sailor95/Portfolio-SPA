@@ -13,13 +13,13 @@ namespace server.Data.Repositories
 
         public bool IsEmailUniq(string email)
         {
-            var user = this.GetSingle(u => u.Email == email);
+            var user = GetSingle(u => u.Email == email);
             return user == null;
         }
 
         public bool IsUsernameUniq(string username)
         {
-            var user = this.GetSingle(u => u.Username == username);
+            var user = GetSingle(u => u.Username == username);
             return user == null;
         }
     }
