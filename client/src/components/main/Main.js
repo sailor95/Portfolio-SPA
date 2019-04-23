@@ -7,6 +7,8 @@ import SoftwareProjectsPage from '../../containers/software-projects-page/Softwa
 import PodcastsPage from '../../containers/podcasts-page/PodcastsPage';
 import ArticlesPage from '../../containers/articles-page/ArticlesPage';
 import PhotosAndDesignPage from '../../containers/photo-and-design-page/PhotosAndDesignPage';
+import Login from '../login/Login';
+import Register from '../register/Register';
 
 
 const main = () => {
@@ -15,6 +17,8 @@ const main = () => {
       <div>
         <Navigationbar />
         <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
         <Route exact path="/sw-projects" component={SoftwareProjectsPage} />
         <Route exact path="/podcasts" component={PodcastsPage} />
         <Route exact path="/articles" component={ArticlesPage} />
