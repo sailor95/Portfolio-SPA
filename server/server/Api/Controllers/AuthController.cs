@@ -16,8 +16,8 @@ namespace server.Api.Controllers
 
         public AuthController(IAuthService a, IUserRepository u)
         {
-            this.authService = a;
-            this.userRepository = u;
+            authService = a;
+            userRepository = u;
         }
 
         [HttpPost("login")]
@@ -39,7 +39,6 @@ namespace server.Api.Controllers
             }
 
             return authService.GetAuthData(user.Id);
-
         }
 
         [HttpPost("register")]
