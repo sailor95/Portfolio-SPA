@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Navigationbar from '../ui/navbar/Navigationbar';
+import Navigationbar from '../presentational/ui/navbar/Navigationbar';
 import Home from '../../containers/home/Home';
 import SoftwareProjectsPage from '../../containers/software-projects-page/SoftwareProjectsPage';
 import PodcastsPage from '../../containers/podcasts-page/PodcastsPage';
 import ArticlesPage from '../../containers/articles-page/ArticlesPage';
 import PhotosAndDesignPage from '../../containers/photo-and-design-page/PhotosAndDesignPage';
-import Login from '../login/Login';
-import Register from '../register/Register';
+import Login from '../presentational/login/Login';
+import Register from '../presentational/register/Register';
 
 
 const main = () => {
