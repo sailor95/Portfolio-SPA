@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 
 // Components
 import Navigationbar from '../presentational/ui/navbar/Navigationbar';
@@ -12,11 +12,12 @@ import Login from '../presentational/login/Login';
 import Register from '../presentational/register/Register';
 import { PrivateRoute } from '../functional/privateRoute/PrivateRoute';
 import Dashboard from '../../containers/dashboard/Dashboard';
+import history from '../../history';
 
 
 const main = () => {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <div>
         <Navigationbar />
         <Route exact path="/" component={Home} />
@@ -28,7 +29,7 @@ const main = () => {
         <Route exact path="/articles" component={ArticlesPage} />
         <Route exact path="/photos-design" component={PhotosAndDesignPage} />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
