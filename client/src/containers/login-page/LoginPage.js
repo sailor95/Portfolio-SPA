@@ -1,7 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
+
+import { login } from '../../actions/auth/authActions';
 
 class LoginPage extends React.Component {
   renderField = ({
@@ -16,12 +19,16 @@ class LoginPage extends React.Component {
       </div>
     )
 
+  onSubmit = (formValues) => {
+    this.props.login(formValues);
+  }
+
   render() {
     return (
       <Col>
         <h3>Login Page</h3>
 
-        <form>
+        <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
           <Field
             name="email"
             type="email"
@@ -57,7 +64,13 @@ const validate = values => {
   return errors;
 }
 
-export default reduxForm({
+const mapStateToProps = state => {
+  return {};
+}
+
+const formWrapepd = reduxForm({
   form: 'loginPage',
   validate,
 })(LoginPage);
+
+export default connect(mapStateToProps, { login })(formWrapepd);

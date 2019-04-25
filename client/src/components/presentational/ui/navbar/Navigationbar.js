@@ -23,6 +23,18 @@ const Navigationbar = () => {
             </li> */}
           </ul>
           <ul className="navbar-nav">
+            {
+              !localStorage.getItem("jwtToken") &&
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">Login</Link>
+              </li>
+            }
+            {
+              localStorage.getItem("jwtToken") &&
+              <li className="nav-item">
+                <Link className="nav-link" to="/dashboard" onClick={() => localStorage.removeItem("jwtToken")}>Remove JWT</Link>
+              </li>
+            }
             <li className="nav-item">
               <a className="nav-link" target="_blank" rel="noopener noreferrer" href="https://2l6nt4.axshare.com">Axure Prototype</a>
             </li>
