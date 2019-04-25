@@ -4,9 +4,11 @@ import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
 
+// My components
 import { login } from '../../actions/auth/authActions';
 
 class LoginPage extends React.Component {
+  // Redux form
   renderField = ({
     input, label, type, meta: { touched, error }
   }) => (
@@ -18,7 +20,7 @@ class LoginPage extends React.Component {
         </div>
       </div>
     )
-
+  // Redux form
   onSubmit = (formValues) => {
     this.props.login(formValues);
   }
@@ -65,7 +67,9 @@ const validate = values => {
 }
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    auth: state.auth
+  };
 }
 
 const formWrapepd = reduxForm({

@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
-import mockReducer from './mock/mockReducer';
+// My reducers
+import authReducer from './auth/authReducer';
 
 const rootReducer = combineReducers({
-  mock: mockReducer,
+  auth: authReducer,
   form: formReducer,
 });
 
