@@ -13,7 +13,7 @@ class Navigationbar extends React.Component {
     if (this.props.auth) {
       return (
         <li className="nav-item">
-          <Link className="nav-link" to="/dashboard" onClick={this.logoutClicked}>Remove JWT</Link>
+          <Link className="nav-link" to="/dashboard" onClick={this.logoutClicked}>Logout</Link>
         </li>
       );
     } else {
