@@ -93,6 +93,7 @@ namespace server
                 .AllowCredentials()
             );
 
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
         }
